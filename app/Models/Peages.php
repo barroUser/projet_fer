@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Peages extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nom',
+        'adresse',
+        'ville',
+        'pays',
+    ];
 }

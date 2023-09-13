@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Administrateurs extends Model
 {
-    protected $table = 'admins';
     use HasFactory;
+
+    protected $table = 'admins';
+    protected $fillable = [
+        'nom',
+        'prenom',
+        'telephone',
+        'email',
+        'password',
+        'id_superadmin',
+        'id_peage',
+    ];
 }

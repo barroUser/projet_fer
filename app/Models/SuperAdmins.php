@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class SuperAdmins extends Model
 {
     use HasFactory;
+    // protected $table = 'admins';
+    protected $fillable = [
+        'nom',
+        'prenom',
+        'telephone',
+        'email',
+        'password',
+    ];
 }

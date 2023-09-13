@@ -18,10 +18,6 @@ return new class extends Migration
             $table->string('valeur');
             $table->string('est_active');
             $table->string('est_valide');
-            // $table->bigInteger('id_agent')->unsigned();
-            // $table->bigInteger('id_peage_depart')->unsigned();
-            // $table->bigInteger('id_peage_arrivee')->unsigned();
-            // $table->bigInteger('id_trajet')->unsigned();
             $table->string('date_creation');
             $table->string('date_activation');
             $table->string('date_validation');

@@ -18,13 +18,8 @@ return new class extends Migration
             $table->string('telephone');
             $table->string('email')->unique();
             $table->string('password');
-            // $table->bigInteger('id_superadmin')->unsigned();
-            // Définition de la clé étrangère id_superadmins dans la table administrateur
-            // $table->foreign('id_superadmin')->references('id')->on('super_admins');
-            // $table->bigInteger('id_peage')->unsigned();
-            // Définition de la clé étrangère id_peage dans la table administrateur
-            // $table->foreign('id_peage')->references('id')->on('peages');
             $table->timestamps();
+            // admin_id_foreign pour les clés etrangères
         });
     }
 
