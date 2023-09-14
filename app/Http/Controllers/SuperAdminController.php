@@ -28,6 +28,6 @@ class SuperAdminController extends Controller
         $adminsuper -> password = $request ->input('password') ;
         $adminsuper ->save();
 
-        return response()->json($adminsuper);
+        return response()->json([$adminsuper,"message" =>"votre requête a bien été enregistré."]);
     }
 }

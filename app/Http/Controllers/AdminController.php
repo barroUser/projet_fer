@@ -21,16 +21,16 @@ class AdminController extends Controller
 
         ]);
 
-        $etudiant = new Administrateurs();
-        $etudiant -> nom = $request -> input('nom');
-        $etudiant -> prenom = $request ->input('prenom') ;
-        $etudiant -> telephone = $request ->input('telephone') ;
-        $etudiant -> email = $request ->input('email');
-        $etudiant -> password = $request ->input('password') ;
-        $etudiant -> id_superadmin = $request ->input('id_superadmin') ;
-        $etudiant -> id_peage = $request ->input('id_peage') ;
-        $etudiant ->save();
+        $admin = new Administrateurs();
+        $admin -> nom = $request -> input('nom');
+        $admin -> prenom = $request ->input('prenom') ;
+        $admin -> telephone = $request ->input('telephone') ;
+        $admin -> email = $request ->input('email');
+        $admin -> password = $request ->input('password') ;
+        $admin -> id_superadmin = $request ->input('id_superadmin') ;
+        $admin -> id_peage = $request ->input('id_peage') ;
+        $admin ->save();
 
-        return response()->json($etudiant);
+        return response()->json([$admin,"message" =>"votre requête a bien été enregistré."]);
     }
 }

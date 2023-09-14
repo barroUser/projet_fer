@@ -33,6 +33,6 @@ class AgentController extends Controller
         $agent -> id_lot = $request ->input('id_lot');
         $agent ->save();
 
-        return response()->json($agent);
+        return response()->json([$agent,"message" =>"votre requête a bien été enregistré."]);
     }
 }

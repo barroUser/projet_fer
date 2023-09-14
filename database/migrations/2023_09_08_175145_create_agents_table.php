@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('telephone');
             $table->string('email')->unique();
             $table->string('password');
-            // $table->bigInteger('id_superadmin')->unsigned();
-            // $table->bigInteger('id_lot')->unsigned();
             $table->timestamps();
         });
     }

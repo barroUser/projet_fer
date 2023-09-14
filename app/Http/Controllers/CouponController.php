@@ -13,7 +13,7 @@ class CouponController extends Controller
         $request->validate([
             'code' =>'required',
             'valeur' =>'required',
-            'est_actif' =>'required',
+            'est_active' =>'required',
             'est_valide' =>'required',
             'id_agent' =>'required',
             'id_peage_depart' =>'required',
@@ -28,7 +28,7 @@ class CouponController extends Controller
         $coupon = new Coupons();
         $coupon -> code = $request -> input('code');
         $coupon -> valeur = $request ->input('valeur');
-        $coupon -> est_actif = $request ->input('est_actif');
+        $coupon -> est_active = $request ->input('est_active');
         $coupon -> est_valide = $request ->input('est_valide');
         $coupon -> id_agent = $request ->input('id_agent');
         $coupon -> id_peage_depart = $request ->input('id_peage_depart');
@@ -39,6 +39,6 @@ class CouponController extends Controller
         $coupon -> date_validation = $request ->input('date_validation');
         $coupon ->save();
 
-        return response()->json($coupon);
+        return response()->json([$coupon, "message" =>"votre requête a bien été enregistré."]);
     }
 }

@@ -25,6 +25,6 @@ class PeageController extends Controller
         $peage -> pays = $request ->input('pays');
         $peage ->save();
 
-        return response()->json($peage);
+        return response()->json([$peage, "message" =>"votre requête a bien été enregistré."]);
     }
 }

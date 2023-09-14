@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::table('agents', function (Blueprint $table) {
             //
-            $table->bigInteger('id_superadmin')->unsigned();
+            $table->bigInteger('id_admin')->unsigned();
             // Définition de la clé étrangère id_peage dans la table administrateur
-            $table->foreign('id_superadmin')->references('id')->on('super_admins')->onDelete('cascade');;
+            $table->foreign('id_admin')->references('id')->on('admin')->onDelete('cascade');;
 
             $table->bigInteger('id_lot')->unsigned();
             // Définition de la clé étrangère id_peage dans la table administrateur
@@ -33,7 +33,7 @@ return new class extends Migration
         Schema::table('agents', function (Blueprint $table) {
             //
             Schema::disableForeignKeyConstraints();
-            $table->dropForeign(['id_superadmin']);
+            $table->dropForeign(['id_admin']);
             $table->dropForeign(['id_lot']);
         });
     }

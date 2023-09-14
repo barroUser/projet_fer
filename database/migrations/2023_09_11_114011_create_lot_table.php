@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('lot', function (Blueprint $table) {
             $table->id();
             $table->string('code');
-            $table->string('libellé');
+            $table->string('libelle');
             $table->timestamps();
         });
     }

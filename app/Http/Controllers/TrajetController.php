@@ -19,12 +19,12 @@ class TrajetController extends Controller
         ]);
 
         $trajet = new Trajets();
-        $agent -> nom = $request -> input('nom');
-        $agent -> ville_depart = $request ->input('ville_depart');
-        $agent -> ville_arrivee = $request ->input('ville_arrivee');
-        $agent -> distance = $request ->input('distance');
-        $agent ->save();
+        $trajet -> nom = $request -> input('nom');
+        $trajet -> ville_depart = $request ->input('ville_depart');
+        $trajet -> ville_arrivee = $request ->input('ville_arrivee');
+        $trajet -> distance = $request ->input('distance');
+        $trajet ->save();
 
-        return response()->json($agent);
+        return response()->json([$trajet, "message" =>"votre requête a bien été enregistré."]);
     }
 }

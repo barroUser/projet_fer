@@ -11,7 +11,7 @@ class Coupons extends Model
     protected $fillable = [
         'code',
         'valeur',
-        'est_actif',
+        'est_active',
         'est_valide',
         'id_agent',
         'id_peage_depart',
